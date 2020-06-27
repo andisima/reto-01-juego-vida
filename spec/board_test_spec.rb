@@ -20,4 +20,12 @@ RSpec.describe "Board" do
       expect(expected_board).to eq(new_board)
     end
   end
+
+  describe "#neighbours" do
+    it "Will let me know how many alive neighbours I am getting" do
+      alive_neighbours = board.neighbours(0, 0)
+      expect(alive_neighbours).to be_kind_of(Integer)
+      expect(alive_neighbours).to eq(2)
+    end
+  end
 end
